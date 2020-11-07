@@ -31,8 +31,7 @@ function createWebserver() {
 
     function stop() {
         console.log(`> [webserver] Stopping...`);
-        console.log(`> [webserver] Gracefully waiting for all clients...`);
-        console.log(`> [webserver] Closing all ports...`);
+        server.close();
         console.log(`> [webserver] Stopping done!`);
     }
 
