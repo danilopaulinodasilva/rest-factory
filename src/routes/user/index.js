@@ -1,18 +1,8 @@
-import express from 'express';
-const Router = express.Router();
+import { Router } from 'express';
+const routes = Router();
 
-/**
- * Routes
- */
-
-Router.get('/post', (req,res) => {
+routes.get('/post', (req,res) => {
     res.send("aeeeee");
 });
-// Router.post('/post', isAuth,  creationValidation(), createPost);
-// Router.put('/post/:id', isAuth, editValidation(), putPost);
-// Router.delete('/post/:id', isAuth, deletePost);
 
-/**
- * Export
- */
-export default Router;
+export default routes;
