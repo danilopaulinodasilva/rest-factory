@@ -1,5 +1,5 @@
-import createDatabaseConnection from './database';
-import createWebserver from './webserver';
+import createDatabaseConnection from './database/index.js';
+import createWebserver from './webserver/index.js';
 
 function createCore() {
 

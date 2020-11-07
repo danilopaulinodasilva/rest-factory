@@ -1,4 +1,7 @@
-import createCore from './core';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env'})
+
+import createCore from './core.js';
 
 const core = createCore();
 

@@ -1,4 +1,4 @@
-import { sql } from '.';
+// import { sql } from '.';
 
 function createDatabaseConnection() {
 
