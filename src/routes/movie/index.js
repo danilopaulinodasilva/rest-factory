@@ -1,18 +1,8 @@
-const express = require('express'),
-      routes  = express.Router();
+import { Router } from 'express';
+const routes = Router();
 
-import MovieService from '../../services/movie/index'
+routes.get('/', (req,res) => {
+    res.send("movies route");
+});
 
-function MovieRoute() {
-
-    function post() {
-        routes.post('/', MovieService.save)
-    }
-
-    return {
-        post
-    }
-
-}
-
-export default MovieRoute;
+export default routes;

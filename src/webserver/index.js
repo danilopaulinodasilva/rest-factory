@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import api from '../routes/user/index.js';
+import routes from '../routes/index.js';
 
 function createWebserver() {
 
@@ -16,10 +16,10 @@ function createWebserver() {
         console.log(`> [webserver] Loading json()...`);
         server.use(express.json());
 
+        console.log(`> [webserver] Loading routes...`);
+        server.use('/', routes);
+        
         console.log(`> [webserver] Waiting for port to be available...`);
-        
-        server.use('/api', api);
-        
         const port = process.env.PORT || 3000;
         server.listen(port);
 
