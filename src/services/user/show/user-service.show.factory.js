@@ -1,0 +1,9 @@
+function showUser() {
+
+    
+
+    return {
+        showUser
+    }
+
+}
