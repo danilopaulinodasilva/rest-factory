@@ -1,9 +1,0 @@
-function showUser() {
-
-    
-
-    return {
-        showUser
-    }
-
-}
