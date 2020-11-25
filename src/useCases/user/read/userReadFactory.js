@@ -1,18 +1,24 @@
-function userFactory() {
+/* 
 
-    function empty() {
+Cria as instancias, ou seja, executa as funções apenas.
 
-    }
+*/
 
-    function regex() {
+import userReadService from './userReadService.js';
+
+function UserReadFactory() {
+
+    const service = userReadService();
+
+    async function read() {
+        return await service.read()
 
     }
 
     return {
-        empty,
-        regex
+        read
     }
 
 }
 
-export default userFactory;
+export default UserReadFactory;

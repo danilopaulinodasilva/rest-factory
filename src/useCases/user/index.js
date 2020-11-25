@@ -1,22 +1,15 @@
-import UserCreate from './create/index';
-import UserRead from './read/index';
-import UserUpdate from './update/index';
-import UserDestroy from './destroy/index';
-
-const UserCreate = UserCreate();
-const UserRead = UserRead();
-const UserUpdate = UserUpdate();
-const UserDestroy = UserDestroy();
+import userReadFactory from './read/userReadFactory.js';
 
 function user() {
 
     function create() {
-        return UserCreate.create();
         
     }
 
-    function read() {
-
+    async function read() {
+        const factory = userReadFactory();
+        return await factory.read();
+        
     }
 
     function update() {

@@ -1,12 +1,12 @@
 import { Router } from 'express';
 const routes = Router();
 
-import user from '../../services/user/index';
+import user from '../../useCases/user/index.js';
 
-const userFactory = user();
+const fim  = user();
 
-routes.get('/', (req,res) => {
-    res.send(userFactory.index());
+routes.get('/', async (req,res) => {
+    res.send(await fim.read());
 });
 
 export default routes;
