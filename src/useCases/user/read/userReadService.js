@@ -6,12 +6,9 @@ Aqui deve apenas "executar" os metódos.
 
 */
 
-import userReadRepository from './userReadRepository.js';
-
-function UserReadService() {
+function UserReadService(repository) {
 
     async function read() {
-        const repository = userReadRepository();
         return await repository.find();
 
     }

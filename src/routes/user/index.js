@@ -3,10 +3,10 @@ const routes = Router();
 
 import user from '../../useCases/user/index.js';
 
-const fim  = user();
+const userRead = user().read();
 
 routes.get('/', async (req,res) => {
-    res.send(await fim.read());
+    res.send(await userRead);
 });
 
 export default routes;

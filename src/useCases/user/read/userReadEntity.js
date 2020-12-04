@@ -6,7 +6,7 @@ Aqui deve apenas "validar" os dados.
 
 */
 
-function User() {
+function User(nome,email,telefone,cpf) {
 
     function isValid() {
         // ????
