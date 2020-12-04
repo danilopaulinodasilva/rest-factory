@@ -4,8 +4,8 @@ Cria as instancias, ou seja, executa as funções apenas.
 
 */
 
-import userReadRepository from './userReadRepository.js';
-import userReadService from './userReadService.js';
+import userReadRepository from '../repositories/userReadRepository.js';
+import userReadService from '../services/userReadService.js';
 
 function UserReadFactory() {
 

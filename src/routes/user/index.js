@@ -1,12 +1,10 @@
 import { Router } from 'express';
 const routes = Router();
 
-import user from '../../useCases/user/index.js';
-
-const userRead = user().read();
+import userReadFactory from '../../factories/userReadFactory.js';
 
 routes.get('/', async (req,res) => {
-    res.send(await userRead);
+    res.send(await userReadFactory.read());
 });
 
 export default routes;
